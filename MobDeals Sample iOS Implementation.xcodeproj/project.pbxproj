@@ -1,0 +1,476 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1E77E563155DEB0100944A2A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E77E562155DEB0100944A2A /* UIKit.framework */; };
+		1E77E565155DEB0100944A2A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E77E564155DEB0100944A2A /* Foundation.framework */; };
+		1E77E567155DEB0100944A2A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E77E566155DEB0100944A2A /* CoreGraphics.framework */; };
+		1E77E56D155DEB0100944A2A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1E77E56B155DEB0100944A2A /* InfoPlist.strings */; };
+		1E77E56F155DEB0100944A2A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E77E56E155DEB0100944A2A /* main.m */; };
+		1E77E573155DEB0100944A2A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E77E572155DEB0100944A2A /* AppDelegate.m */; };
+		1E77E576155DEB0100944A2A /* MainStoryboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1E77E574155DEB0100944A2A /* MainStoryboard_iPhone.storyboard */; };
+		1E77E579155DEB0100944A2A /* MainStoryboard_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1E77E577155DEB0100944A2A /* MainStoryboard_iPad.storyboard */; };
+		1E77E57C155DEB0100944A2A /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E77E57B155DEB0100944A2A /* ViewController.m */; };
+		1E77E584155DEB0100944A2A /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E77E583155DEB0100944A2A /* SenTestingKit.framework */; };
+		1E77E585155DEB0100944A2A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E77E562155DEB0100944A2A /* UIKit.framework */; };
+		1E77E586155DEB0100944A2A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E77E564155DEB0100944A2A /* Foundation.framework */; };
+		1E77E58E155DEB0100944A2A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1E77E58C155DEB0100944A2A /* InfoPlist.strings */; };
+		1E77E591155DEB0100944A2A /* MobDeals_Sample_iOS_ImplementationTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E77E590155DEB0100944A2A /* MobDeals_Sample_iOS_ImplementationTests.m */; };
+		1E77E59C155DEB3800944A2A /* cancel_button.png in Resources */ = {isa = PBXBuildFile; fileRef = 1E77E59A155DEB3800944A2A /* cancel_button.png */; };
+		1E77E59D155DEB3800944A2A /* cancel_button@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1E77E59B155DEB3800944A2A /* cancel_button@2x.png */; };
+		1E77E5A0155DEB4B00944A2A /* MobDeals.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E77E59F155DEB4B00944A2A /* MobDeals.m */; };
+		1E77E5A2155DEB7800944A2A /* MobDeals.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1E77E5A1155DEB7800944A2A /* MobDeals.storyboard */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		1E77E587155DEB0100944A2A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1E77E555155DEB0100944A2A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1E77E55D155DEB0100944A2A;
+			remoteInfo = "MobDeals Sample iOS Implementation";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		1E77E55E155DEB0100944A2A /* MobDeals Sample iOS Implementation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MobDeals Sample iOS Implementation.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1E77E562155DEB0100944A2A /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		1E77E564155DEB0100944A2A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		1E77E566155DEB0100944A2A /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		1E77E56A155DEB0100944A2A /* MobDeals Sample iOS Implementation-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "MobDeals Sample iOS Implementation-Info.plist"; sourceTree = "<group>"; };
+		1E77E56C155DEB0100944A2A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		1E77E56E155DEB0100944A2A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		1E77E570155DEB0100944A2A /* MobDeals Sample iOS Implementation-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MobDeals Sample iOS Implementation-Prefix.pch"; sourceTree = "<group>"; };
+		1E77E571155DEB0100944A2A /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		1E77E572155DEB0100944A2A /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		1E77E575155DEB0100944A2A /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPhone.storyboard; sourceTree = "<group>"; };
+		1E77E578155DEB0100944A2A /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPad.storyboard; sourceTree = "<group>"; };
+		1E77E57A155DEB0100944A2A /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		1E77E57B155DEB0100944A2A /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		1E77E582155DEB0100944A2A /* MobDeals Sample iOS ImplementationTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "MobDeals Sample iOS ImplementationTests.octest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1E77E583155DEB0100944A2A /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		1E77E58B155DEB0100944A2A /* MobDeals Sample iOS ImplementationTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "MobDeals Sample iOS ImplementationTests-Info.plist"; sourceTree = "<group>"; };
+		1E77E58D155DEB0100944A2A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		1E77E58F155DEB0100944A2A /* MobDeals_Sample_iOS_ImplementationTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MobDeals_Sample_iOS_ImplementationTests.h; sourceTree = "<group>"; };
+		1E77E590155DEB0100944A2A /* MobDeals_Sample_iOS_ImplementationTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MobDeals_Sample_iOS_ImplementationTests.m; sourceTree = "<group>"; };
+		1E77E59A155DEB3800944A2A /* cancel_button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cancel_button.png; sourceTree = "<group>"; };
+		1E77E59B155DEB3800944A2A /* cancel_button@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cancel_button@2x.png"; sourceTree = "<group>"; };
+		1E77E59E155DEB4B00944A2A /* MobDeals.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MobDeals.h; sourceTree = "<group>"; };
+		1E77E59F155DEB4B00944A2A /* MobDeals.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MobDeals.m; sourceTree = "<group>"; };
+		1E77E5A1155DEB7800944A2A /* MobDeals.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MobDeals.storyboard; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1E77E55B155DEB0100944A2A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1E77E563155DEB0100944A2A /* UIKit.framework in Frameworks */,
+				1E77E565155DEB0100944A2A /* Foundation.framework in Frameworks */,
+				1E77E567155DEB0100944A2A /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1E77E57E155DEB0100944A2A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1E77E584155DEB0100944A2A /* SenTestingKit.framework in Frameworks */,
+				1E77E585155DEB0100944A2A /* UIKit.framework in Frameworks */,
+				1E77E586155DEB0100944A2A /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1E77E553155DEB0100944A2A = {
+			isa = PBXGroup;
+			children = (
+				1E77E568155DEB0100944A2A /* MobDeals Sample iOS Implementation */,
+				1E77E589155DEB0100944A2A /* MobDeals Sample iOS ImplementationTests */,
+				1E77E561155DEB0100944A2A /* Frameworks */,
+				1E77E55F155DEB0100944A2A /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		1E77E55F155DEB0100944A2A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1E77E55E155DEB0100944A2A /* MobDeals Sample iOS Implementation.app */,
+				1E77E582155DEB0100944A2A /* MobDeals Sample iOS ImplementationTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		1E77E561155DEB0100944A2A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1E77E562155DEB0100944A2A /* UIKit.framework */,
+				1E77E564155DEB0100944A2A /* Foundation.framework */,
+				1E77E566155DEB0100944A2A /* CoreGraphics.framework */,
+				1E77E583155DEB0100944A2A /* SenTestingKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		1E77E568155DEB0100944A2A /* MobDeals Sample iOS Implementation */ = {
+			isa = PBXGroup;
+			children = (
+				1E77E59E155DEB4B00944A2A /* MobDeals.h */,
+				1E77E59F155DEB4B00944A2A /* MobDeals.m */,
+				1E77E5A1155DEB7800944A2A /* MobDeals.storyboard */,
+				1E77E59A155DEB3800944A2A /* cancel_button.png */,
+				1E77E59B155DEB3800944A2A /* cancel_button@2x.png */,
+				1E77E571155DEB0100944A2A /* AppDelegate.h */,
+				1E77E572155DEB0100944A2A /* AppDelegate.m */,
+				1E77E574155DEB0100944A2A /* MainStoryboard_iPhone.storyboard */,
+				1E77E577155DEB0100944A2A /* MainStoryboard_iPad.storyboard */,
+				1E77E57A155DEB0100944A2A /* ViewController.h */,
+				1E77E57B155DEB0100944A2A /* ViewController.m */,
+				1E77E569155DEB0100944A2A /* Supporting Files */,
+			);
+			path = "MobDeals Sample iOS Implementation";
+			sourceTree = "<group>";
+		};
+		1E77E569155DEB0100944A2A /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				1E77E56A155DEB0100944A2A /* MobDeals Sample iOS Implementation-Info.plist */,
+				1E77E56B155DEB0100944A2A /* InfoPlist.strings */,
+				1E77E56E155DEB0100944A2A /* main.m */,
+				1E77E570155DEB0100944A2A /* MobDeals Sample iOS Implementation-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		1E77E589155DEB0100944A2A /* MobDeals Sample iOS ImplementationTests */ = {
+			isa = PBXGroup;
+			children = (
+				1E77E58F155DEB0100944A2A /* MobDeals_Sample_iOS_ImplementationTests.h */,
+				1E77E590155DEB0100944A2A /* MobDeals_Sample_iOS_ImplementationTests.m */,
+				1E77E58A155DEB0100944A2A /* Supporting Files */,
+			);
+			path = "MobDeals Sample iOS ImplementationTests";
+			sourceTree = "<group>";
+		};
+		1E77E58A155DEB0100944A2A /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				1E77E58B155DEB0100944A2A /* MobDeals Sample iOS ImplementationTests-Info.plist */,
+				1E77E58C155DEB0100944A2A /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		1E77E55D155DEB0100944A2A /* MobDeals Sample iOS Implementation */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1E77E594155DEB0100944A2A /* Build configuration list for PBXNativeTarget "MobDeals Sample iOS Implementation" */;
+			buildPhases = (
+				1E77E55A155DEB0100944A2A /* Sources */,
+				1E77E55B155DEB0100944A2A /* Frameworks */,
+				1E77E55C155DEB0100944A2A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "MobDeals Sample iOS Implementation";
+			productName = "MobDeals Sample iOS Implementation";
+			productReference = 1E77E55E155DEB0100944A2A /* MobDeals Sample iOS Implementation.app */;
+			productType = "com.apple.product-type.application";
+		};
+		1E77E581155DEB0100944A2A /* MobDeals Sample iOS ImplementationTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1E77E597155DEB0100944A2A /* Build configuration list for PBXNativeTarget "MobDeals Sample iOS ImplementationTests" */;
+			buildPhases = (
+				1E77E57D155DEB0100944A2A /* Sources */,
+				1E77E57E155DEB0100944A2A /* Frameworks */,
+				1E77E57F155DEB0100944A2A /* Resources */,
+				1E77E580155DEB0100944A2A /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1E77E588155DEB0100944A2A /* PBXTargetDependency */,
+			);
+			name = "MobDeals Sample iOS ImplementationTests";
+			productName = "MobDeals Sample iOS ImplementationTests";
+			productReference = 1E77E582155DEB0100944A2A /* MobDeals Sample iOS ImplementationTests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		1E77E555155DEB0100944A2A /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0420;
+			};
+			buildConfigurationList = 1E77E558155DEB0100944A2A /* Build configuration list for PBXProject "MobDeals Sample iOS Implementation" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 1E77E553155DEB0100944A2A;
+			productRefGroup = 1E77E55F155DEB0100944A2A /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				1E77E55D155DEB0100944A2A /* MobDeals Sample iOS Implementation */,
+				1E77E581155DEB0100944A2A /* MobDeals Sample iOS ImplementationTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1E77E55C155DEB0100944A2A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1E77E56D155DEB0100944A2A /* InfoPlist.strings in Resources */,
+				1E77E576155DEB0100944A2A /* MainStoryboard_iPhone.storyboard in Resources */,
+				1E77E579155DEB0100944A2A /* MainStoryboard_iPad.storyboard in Resources */,
+				1E77E59C155DEB3800944A2A /* cancel_button.png in Resources */,
+				1E77E59D155DEB3800944A2A /* cancel_button@2x.png in Resources */,
+				1E77E5A2155DEB7800944A2A /* MobDeals.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1E77E57F155DEB0100944A2A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1E77E58E155DEB0100944A2A /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1E77E580155DEB0100944A2A /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1E77E55A155DEB0100944A2A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1E77E56F155DEB0100944A2A /* main.m in Sources */,
+				1E77E573155DEB0100944A2A /* AppDelegate.m in Sources */,
+				1E77E57C155DEB0100944A2A /* ViewController.m in Sources */,
+				1E77E5A0155DEB4B00944A2A /* MobDeals.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1E77E57D155DEB0100944A2A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1E77E591155DEB0100944A2A /* MobDeals_Sample_iOS_ImplementationTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		1E77E588155DEB0100944A2A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1E77E55D155DEB0100944A2A /* MobDeals Sample iOS Implementation */;
+			targetProxy = 1E77E587155DEB0100944A2A /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		1E77E56B155DEB0100944A2A /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1E77E56C155DEB0100944A2A /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		1E77E574155DEB0100944A2A /* MainStoryboard_iPhone.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1E77E575155DEB0100944A2A /* en */,
+			);
+			name = MainStoryboard_iPhone.storyboard;
+			sourceTree = "<group>";
+		};
+		1E77E577155DEB0100944A2A /* MainStoryboard_iPad.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1E77E578155DEB0100944A2A /* en */,
+			);
+			name = MainStoryboard_iPad.storyboard;
+			sourceTree = "<group>";
+		};
+		1E77E58C155DEB0100944A2A /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1E77E58D155DEB0100944A2A /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		1E77E592155DEB0100944A2A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		1E77E593155DEB0100944A2A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		1E77E595155DEB0100944A2A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "MobDeals Sample iOS Implementation/MobDeals Sample iOS Implementation-Prefix.pch";
+				INFOPLIST_FILE = "MobDeals Sample iOS Implementation/MobDeals Sample iOS Implementation-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		1E77E596155DEB0100944A2A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "MobDeals Sample iOS Implementation/MobDeals Sample iOS Implementation-Prefix.pch";
+				INFOPLIST_FILE = "MobDeals Sample iOS Implementation/MobDeals Sample iOS Implementation-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		1E77E598155DEB0100944A2A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/MobDeals Sample iOS Implementation.app/MobDeals Sample iOS Implementation";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "MobDeals Sample iOS Implementation/MobDeals Sample iOS Implementation-Prefix.pch";
+				INFOPLIST_FILE = "MobDeals Sample iOS ImplementationTests/MobDeals Sample iOS ImplementationTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		1E77E599155DEB0100944A2A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/MobDeals Sample iOS Implementation.app/MobDeals Sample iOS Implementation";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "MobDeals Sample iOS Implementation/MobDeals Sample iOS Implementation-Prefix.pch";
+				INFOPLIST_FILE = "MobDeals Sample iOS ImplementationTests/MobDeals Sample iOS ImplementationTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1E77E558155DEB0100944A2A /* Build configuration list for PBXProject "MobDeals Sample iOS Implementation" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1E77E592155DEB0100944A2A /* Debug */,
+				1E77E593155DEB0100944A2A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1E77E594155DEB0100944A2A /* Build configuration list for PBXNativeTarget "MobDeals Sample iOS Implementation" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1E77E595155DEB0100944A2A /* Debug */,
+				1E77E596155DEB0100944A2A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		1E77E597155DEB0100944A2A /* Build configuration list for PBXNativeTarget "MobDeals Sample iOS ImplementationTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1E77E598155DEB0100944A2A /* Debug */,
+				1E77E599155DEB0100944A2A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 1E77E555155DEB0100944A2A /* Project object */;
+}
