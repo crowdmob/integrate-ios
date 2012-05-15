@@ -82,6 +82,9 @@
     //Set the permalink
     loot.permalink = [permalink text];
     
+    //Use the staging server
+    loot.environment = @"STAGING";
+    
     //Verify the install with Loot
     [loot verifyInstall];
     

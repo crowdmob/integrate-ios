@@ -213,7 +213,7 @@
 		1E77E555155DEB0100944A2A /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0420;
+				LastUpgradeCheck = 0430;
 			};
 			buildConfigurationList = 1E77E558155DEB0100944A2A /* Build configuration list for PBXProject "MobDeals Sample iOS Implementation" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -461,6 +461,7 @@
 				1E77E596155DEB0100944A2A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		1E77E597155DEB0100944A2A /* Build configuration list for PBXNativeTarget "MobDeals Sample iOS ImplementationTests" */ = {
 			isa = XCConfigurationList;
@@ -469,6 +470,7 @@
 				1E77E599155DEB0100944A2A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

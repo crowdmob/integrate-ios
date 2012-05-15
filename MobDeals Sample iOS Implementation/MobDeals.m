@@ -164,7 +164,7 @@
 {
     //Set up the message
     NSString *uuidHash = [self getMacAddressHash];
-    NSString *message = [NSString stringWithFormat:@"%@%@", permalink, uuidHash];
+    NSString *message = [NSString stringWithFormat:@"%@,%@", permalink, uuidHash];
     NSString *secretHash = [self sha256:message salt:secretKey];
     
     //Set up the call to the core server to report the install
@@ -176,6 +176,8 @@
     if (environment != @"PRODUCTION") {
         URL = [NSURL URLWithString:@"http://deals.mobstaging.com/loot/verify_install.json"];
     }
+    
+    URL = [NSURL URLWithString:@"http://localhost:3000/loot/verify_install.json"];
     
     //Set the parameters
     NSData *parameters = [[NSString stringWithFormat:@"verify[permalink]=%@&verify[uuid]=%@&verify[secret_hash]=%@", permalink, uuidHash, secretHash] dataUsingEncoding:NSUTF8StringEncoding];
@@ -196,10 +198,11 @@
         
         dispatch_async(dispatch_get_main_queue(), ^{
             UIAlertView *statusDisplay = [[UIAlertView alloc]
-                                      initWithTitle: @"Installation Status"
-                                      message: [data valueForKey:@"install_status"]
-                                      delegate: self cancelButtonTitle: @"Ok" 
-                                      otherButtonTitles: nil];
+                                          initWithTitle: @"Installation Status"
+                                          //message: [data valueForKey:@"install_status"]
+                                          message: [data valueForKey:@"install_status"]
+                                          delegate: self cancelButtonTitle: @"Ok" 
+                                          otherButtonTitles: nil];
         
             [statusDisplay show];
         });
@@ -307,7 +310,7 @@
 //SHA-256 Hash Algorithm with a salt input, returns a hex-encoded hash value
 - (NSString *)sha256:(NSString *)input salt:(NSString *)salt
 {
-    NSString *message = [NSString stringWithFormat:@"%@,%@", salt, input];
+    NSString *message = [NSString stringWithFormat:@"%@%@", salt, input];
     const char *cStr = [message UTF8String];
     unsigned char hash[CC_SHA256_DIGEST_LENGTH];
     CC_SHA256(cStr, strlen(cStr), hash);
