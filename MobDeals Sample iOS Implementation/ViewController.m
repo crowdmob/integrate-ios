@@ -12,7 +12,7 @@
 #include <net/if_dl.h>
 #include <CommonCrypto/CommonDigest.h>
 #import "ViewController.h"
-#import "MobDeals.h"
+#import "CrowdMob.h"
 
 @implementation ViewController
 
@@ -31,6 +31,10 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
+    
+    //Set the text field delegates to use this view controller
+    secretKey.delegate = self;
+    permalink.delegate = self;
 }
 
 - (void)viewDidUnload
@@ -73,8 +77,11 @@
 //When clicked, this submits the permalink, secret key, and mac address hash to verify a Loot install
 - (IBAction)submitButton:(id)sender
 {
-    //Initialize Loot within the MobDeals package
-    MobDeals *loot = [[MobDeals alloc] init];
+    //Initialize Loot within the CrowdMob package
+    CrowdMob *loot = [[CrowdMob alloc] init];
+    
+    //Set this controller as the delegate
+    loot.delegate = self;
     
     //Set the secret key
     loot.secretKey = [secretKey text];
@@ -90,7 +97,7 @@
     
 }
 
-//When clicked, this launches a UIWebView that connects to the MobDeals UIWebView
+//When clicked, this launches a UIWebView that connects to the CrowdMob UIWebView
 - (IBAction)offerwallButton:(id)sender
 {
     //Display a modal view which includes a UIWebView to handle the purchase
@@ -99,13 +106,10 @@
     //Set the secret key
     offerwall.secretKey = [secretKey text];
     
-    //Set the permalink
-    offerwall.permalink = [permalink text];
-    
     //Set the environment
     offerwall.environment = @"STAGING";
     
-    //Set this controller as the delegate for the modal view controller
+    //Set this controller as the delegate
     offerwall.delegate = self;
     
     //Launch the modal view controller, which includes the UIWebView
@@ -126,6 +130,58 @@
         //Clear the cache - not recommended for production application use
         [[NSURLCache sharedURLCache] removeAllCachedResponses];
     }
+}
+
+//Delegate method that runs when a verification succeeds or fails
+- (void) verificationStatus:(BOOL) status verificationStatusCode:(NSInteger) statusCode
+{
+    NSString *statusMessage;
+    
+    if (status) {
+        statusMessage = [NSString stringWithFormat:@"Code: %d", statusCode];
+    }
+    else {
+        statusMessage = @"Failed!";
+    }
+    
+    //Display the transaction status
+    UIAlertView *displayStatus = [[UIAlertView alloc]
+                                  initWithTitle: @"Verification Status"
+                                  message: statusMessage
+                                  delegate: self cancelButtonTitle: @"Ok" 
+                                  otherButtonTitles: nil];
+    
+    [displayStatus show];
+}
+
+//Delegate method that runs when a MobDeals transaction succeeds or fails
+- (void) transactionStatus:(BOOL) status
+{
+    NSString *statusMessage = [NSString alloc];
+    
+    if (status) {
+        statusMessage = @"Success!";
+    }
+    else {
+        statusMessage = @"Failed!";
+    }
+    
+    //Display the transaction status
+    UIAlertView *displayStatus = [[UIAlertView alloc]
+                            initWithTitle: @"Transaction Status"
+                            message: statusMessage
+                            delegate: self cancelButtonTitle: @"Ok" 
+                            otherButtonTitles: nil];
+    
+    [displayStatus show];
+}
+
+//Delegate method for the text field to resign the keyboard
+- (BOOL)textFieldShouldReturn:(UITextField *)textField
+{
+    [textField resignFirstResponder];
+    
+    return YES;
 }
 
 @end

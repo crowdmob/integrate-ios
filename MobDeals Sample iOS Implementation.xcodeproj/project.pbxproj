@@ -23,7 +23,7 @@
 		1E77E591155DEB0100944A2A /* MobDeals_Sample_iOS_ImplementationTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E77E590155DEB0100944A2A /* MobDeals_Sample_iOS_ImplementationTests.m */; };
 		1E77E59C155DEB3800944A2A /* cancel_button.png in Resources */ = {isa = PBXBuildFile; fileRef = 1E77E59A155DEB3800944A2A /* cancel_button.png */; };
 		1E77E59D155DEB3800944A2A /* cancel_button@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1E77E59B155DEB3800944A2A /* cancel_button@2x.png */; };
-		1E77E5A0155DEB4B00944A2A /* MobDeals.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E77E59F155DEB4B00944A2A /* MobDeals.m */; };
+		1E77E5A0155DEB4B00944A2A /* CrowdMob.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E77E59F155DEB4B00944A2A /* CrowdMob.m */; };
 		1E77E5A2155DEB7800944A2A /* MobDeals.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1E77E5A1155DEB7800944A2A /* MobDeals.storyboard */; };
 /* End PBXBuildFile section */
 
@@ -60,8 +60,8 @@
 		1E77E590155DEB0100944A2A /* MobDeals_Sample_iOS_ImplementationTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MobDeals_Sample_iOS_ImplementationTests.m; sourceTree = "<group>"; };
 		1E77E59A155DEB3800944A2A /* cancel_button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cancel_button.png; sourceTree = "<group>"; };
 		1E77E59B155DEB3800944A2A /* cancel_button@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cancel_button@2x.png"; sourceTree = "<group>"; };
-		1E77E59E155DEB4B00944A2A /* MobDeals.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MobDeals.h; sourceTree = "<group>"; };
-		1E77E59F155DEB4B00944A2A /* MobDeals.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MobDeals.m; sourceTree = "<group>"; };
+		1E77E59E155DEB4B00944A2A /* CrowdMob.h */ = {isa = PBXFileReference; fileEncoding = 4; path = CrowdMob.h; sourceTree = "<group>"; };
+		1E77E59F155DEB4B00944A2A /* CrowdMob.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CrowdMob.m; sourceTree = "<group>"; };
 		1E77E5A1155DEB7800944A2A /* MobDeals.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MobDeals.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -122,8 +122,8 @@
 		1E77E568155DEB0100944A2A /* MobDeals Sample iOS Implementation */ = {
 			isa = PBXGroup;
 			children = (
-				1E77E59E155DEB4B00944A2A /* MobDeals.h */,
-				1E77E59F155DEB4B00944A2A /* MobDeals.m */,
+				1E77E59E155DEB4B00944A2A /* CrowdMob.h */,
+				1E77E59F155DEB4B00944A2A /* CrowdMob.m */,
 				1E77E5A1155DEB7800944A2A /* MobDeals.storyboard */,
 				1E77E59A155DEB3800944A2A /* cancel_button.png */,
 				1E77E59B155DEB3800944A2A /* cancel_button@2x.png */,
@@ -281,7 +281,7 @@
 				1E77E56F155DEB0100944A2A /* main.m in Sources */,
 				1E77E573155DEB0100944A2A /* AppDelegate.m in Sources */,
 				1E77E57C155DEB0100944A2A /* ViewController.m in Sources */,
-				1E77E5A0155DEB4B00944A2A /* MobDeals.m in Sources */,
+				1E77E5A0155DEB4B00944A2A /* CrowdMob.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

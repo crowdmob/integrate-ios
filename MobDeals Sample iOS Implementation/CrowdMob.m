@@ -1,12 +1,12 @@
 //
-//  MobDeals.m
+//  CrowdMob.m
 //  Loot iOS SDK
 //
 //  Created by Rohen Peterson on 5/4/12.
 //  Copyright (c) 2012 CrowdMob, Inc. All rights reserved.
 //
 
-#import "MobDeals.h"
+#import "CrowdMob.h"
 #import <QuartzCore/QuartzCore.h>
 #include <sys/socket.h>
 #include <sys/sysctl.h>
@@ -14,10 +14,11 @@
 #include <net/if_dl.h>
 #include <CommonCrypto/CommonDigest.h>
 
-@implementation MobDeals
+@implementation CrowdMob
 
-//Delegate for the UIWebView
+//Delegate
 @synthesize delegate;
+
 //Instance of the actual UIWebView
 @synthesize webView;
 //Secret key that must be set for all operations
@@ -80,6 +81,8 @@
         url = [NSURL URLWithString:@"http://offerwall.mobstaging.com"];
     }
     
+    url = [NSURL URLWithString:@"http://localhost:3001"];
+    
     //Create the URL request and pass it to the UIWebView
     NSURLRequest *urlRequest = [NSURLRequest requestWithURL:url];
     [webView loadRequest:urlRequest];
@@ -119,7 +122,7 @@
         //Format the string into a JSON object
         NSData *jsonData = [[[[request URL] absoluteString] stringByReplacingPercentEscapesUsingEncoding:[NSString defaultCStringEncoding]] dataUsingEncoding:NSUTF8StringEncoding];
         jsonData = [jsonData subdataWithRange:NSMakeRange([@"mobdeals-html5:" length], [jsonData length] - [@"mobdeals-html5:" length])];
-        
+
         //Transform the JSON object into a dictionary
         NSError *error = [[NSError alloc] init];
         NSDictionary *data = [NSJSONSerialization JSONObjectWithData:jsonData options:0 error:&error];
@@ -132,24 +135,18 @@
         
         //Verify the transaction based on the md5 hash
         if ([[self md5:[NSString stringWithFormat:@"%@%@%@%@", coins, timestamp, transID, secretKey]] isEqualToString:signature]) {
-            //If the transaction is valid, display the number of coins obtained
-            UIAlertView *success = [[UIAlertView alloc]
-                                    initWithTitle: @"Transaction Complete"
-                                    message: [NSString stringWithFormat:@"User has purchased %@ coins!", coins]
-                                    delegate: self cancelButtonTitle: @"Ok" 
-                                    otherButtonTitles: nil];
-            
-            [success show];
+            //If the transaction succeeds, inform the delegate
+            if([delegate respondsToSelector:@selector(transactionStatus:)])
+            {
+                [delegate transactionStatus:true];
+            }
         }
         else {
-            //If the transaction fails, display notification that verification failed
-            UIAlertView *failure = [[UIAlertView alloc]
-                                    initWithTitle: @"Transaction Failed"
-                                    message: @"Transaction was not verified!"
-                                    delegate: self cancelButtonTitle: @"Ok" 
-                                    otherButtonTitles: nil];
-            
-            [failure show];
+            //If the transaction fails, inform the delegate
+            if([delegate respondsToSelector:@selector(transactionStatus:)])
+            {
+                [delegate transactionStatus:false];
+            }
         }
         
         return NO;
@@ -177,7 +174,7 @@
         URL = [NSURL URLWithString:@"http://deals.mobstaging.com/loot/verify_install.json"];
     }
     
-    URL = [NSURL URLWithString:@"http://localhost:3000/loot/verify_install.json"];
+    //URL = [NSURL URLWithString:@"http://localhost:3000/loot/verify_install.json"];
     
     //Set the parameters
     NSData *parameters = [[NSString stringWithFormat:@"verify[permalink]=%@&verify[uuid]=%@&verify[secret_hash]=%@", permalink, uuidHash, secretHash] dataUsingEncoding:NSUTF8StringEncoding];
@@ -197,14 +194,13 @@
         NSDictionary *data = [NSJSONSerialization JSONObjectWithData:jsonData options:0 error:&error];
         
         dispatch_async(dispatch_get_main_queue(), ^{
-            UIAlertView *statusDisplay = [[UIAlertView alloc]
-                                          initWithTitle: @"Installation Status"
-                                          //message: [data valueForKey:@"install_status"]
-                                          message: [data valueForKey:@"install_status"]
-                                          delegate: self cancelButtonTitle: @"Ok" 
-                                          otherButtonTitles: nil];
-        
-            [statusDisplay show];
+            //Inform the delegate of the verification status
+            if([delegate respondsToSelector:@selector(verificationStatus:verificationStatusCode:)])
+            {
+                NSLog(@"Attempting report");
+
+                [delegate verificationStatus:true verificationStatusCode:[[data valueForKey:@"install_status"] intValue]];
+            }
         });
     }];
 }

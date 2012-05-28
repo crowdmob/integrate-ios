@@ -1,5 +1,5 @@
 //
-//  MobDeals.h
+//  CrowdMob.h
 //  Loot iOS SDK
 //
 //  Created by Rohen Peterson on 5/4/12.
@@ -11,22 +11,28 @@
 
 
 //UIWebView will act as its own delegate
-@protocol OfferwallDelegate <NSObject>
+@protocol CrowdMobDelegate <NSObject>
 @required
 
 //Allow for the delegate to close the browser via a button
 - (void) closeOfferwall:(BOOL) status;
 
+//Runs when a verification succeeds or fails
+- (void) verificationStatus:(BOOL) status verificationStatusCode:(NSInteger) statusCode;
+
+//Runs when a MobDeals transaction succeeds or fails
+- (void) transactionStatus:(BOOL) status;
+
 @end
 
-
-@interface MobDeals : UIViewController<UIWebViewDelegate> {
+@interface CrowdMob : UIViewController<UIWebViewDelegate> {
     IBOutlet UIWebView *webView;
 }
 
 
-//Delegate for the UIWebView
-@property (nonatomic,assign) id <OfferwallDelegate> delegate;
+//Delegate for the messaging
+@property (nonatomic,assign) id <CrowdMobDelegate> delegate;
+
 //Instance of the actual UIWebView
 @property (nonatomic,retain) UIWebView *webView;
 //Secret key that must be set for all operations

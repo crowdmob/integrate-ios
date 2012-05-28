@@ -6,12 +6,12 @@
 //  Copyright (c) 2012 __MyCompanyName__. All rights reserved.
 //
 
-#import "MobDeals.h"
+#import "CrowdMob.h"
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController<OfferwallDelegate>
+@interface ViewController : UIViewController<CrowdMobDelegate, UITextFieldDelegate>
 {
-    MobDeals *offerwall;
+    CrowdMob *offerwall;
 }
 
 @property (weak, nonatomic) IBOutlet UITextField *permalink;
@@ -25,5 +25,14 @@
 
 //Delegate method from the modal view controller's required protocol that closes the UIWebView
 - (void) closeOfferwall:(BOOL) status;
+
+//Delegate method that runs when a verification succeeds or fails
+- (void) verificationStatus:(BOOL) status verificationStatusCode:(NSInteger) statusCode;
+
+//Delegate method that runs when a MobDeals transaction succeeds or fails
+- (void) transactionStatus:(BOOL) status;
+
+//Delegate for the text field to resign the keyboard
+- (BOOL)textFieldShouldReturn:(UITextField *)textField;
 
 @end
