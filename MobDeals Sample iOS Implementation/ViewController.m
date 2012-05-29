@@ -100,13 +100,13 @@
 //When clicked, this launches a UIWebView that connects to the CrowdMob UIWebView
 - (IBAction)offerwallButton:(id)sender
 {
-    //Display a modal view which includes a UIWebView to handle the purchase
+    //Instantiate a modal view which includes a UIWebView to handle the purchase
     offerwall = [[UIStoryboard storyboardWithName:@"MobDeals" bundle:nil] instantiateInitialViewController];
     
     //Set the secret key
     offerwall.secretKey = [secretKey text];
     
-    //Set the environment
+    //Set the environment - use "PRODUCTION" for production environment and "STAGING" for a staging environment
     offerwall.environment = @"STAGING";
     
     //Set this controller as the delegate
@@ -154,8 +154,8 @@
     [displayStatus show];
 }
 
-//Delegate method that runs when a MobDeals transaction succeeds or fails
-- (void) transactionStatus:(BOOL) status
+//Delegate method that runs when a MobDeals transaction succeeds or fails, along with transaction information on success
+- (void) transactionStatus:(BOOL)status currencyAmount:(NSInteger)amount transactionId:(NSString *)transactionId timestamp:(NSString *)timestamp
 {
     NSString *statusMessage = [NSString alloc];
     

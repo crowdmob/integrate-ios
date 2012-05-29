@@ -25,13 +25,10 @@
 
 //Delegate method from the modal view controller's required protocol that closes the UIWebView
 - (void) closeOfferwall:(BOOL) status;
-
+//Delegate method that runs when a MobDeals transaction succeeds or fails, along with transaction information on success
+- (void) transactionStatus:(BOOL) status;
 //Delegate method that runs when a verification succeeds or fails
 - (void) verificationStatus:(BOOL) status verificationStatusCode:(NSInteger) statusCode;
-
-//Delegate method that runs when a MobDeals transaction succeeds or fails
-- (void) transactionStatus:(BOOL) status;
-
 //Delegate for the text field to resign the keyboard
 - (BOOL)textFieldShouldReturn:(UITextField *)textField;
 
